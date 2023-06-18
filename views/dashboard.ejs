@@ -47,7 +47,6 @@
 												<button class="btn btn-lg btn-danger text-white"><span>RELEASE</span></button>
 											</form>
 										</div>
-
 									</div>
 								</div>
 							</div><!-- end col -->
@@ -74,21 +73,21 @@
 			<div id="overviews" class="section wb">
 				<div class="container">
 					<div class="row">
-						
+						<% if (flashMessages) { %>
 
-							
+
+							<% if (flashMessages.success) { %>
 								<div class="alert alert-success">
-									
+									<%= flashMessages.success %>
 								</div>
 		
-							
-								<div class="alert alert-danger">
-									
+							<% } else if (flashMessages.error) { %>
+								<div class="alert alert-success">
+									<%= flashMessages.error %>
 								</div>
-							
+							<% } %>
 		
-						
-
+						<% } %>
 						<!-- Modal Button -->
 						<div class="col-lg-12 text-center ">
 							<button class="btn btn-lg btn-warning rounded-0 text-white" href="#"
